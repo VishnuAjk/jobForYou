@@ -1,0 +1,29 @@
+<div><div class="container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Contact</th>
+          <th scope="col">Resume</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <%applicants.forEach((candidate)=>{%>
+        <tr>
+          <th scope="row"><%=candidate.candidateId%></th>
+          <td><%=candidate.name%></td>
+          <td><%=candidate.email%></td>
+          <td><%=candidate.contact%></td>
+          <td>
+            <a class="btn btn-sm btn-primary" href="http://localhost:3200/uploads/<%=candidate.resume%>" target="_blank">view</a>
+          </td>
+        </tr>
+        <%})%>
+        
+      </tbody>
+    </table>
+  </div>
+  </div>
